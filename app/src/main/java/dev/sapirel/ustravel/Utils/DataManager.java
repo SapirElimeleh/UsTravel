@@ -75,7 +75,7 @@ public class DataManager {
         trips.clear();
         myTrips.clear();
 
-            database.collection("Trips").orderBy("userName", Query.Direction.ASCENDING)
+            database.collection("Trips").orderBy("tripLocation", Query.Direction.ASCENDING)
                     .addSnapshotListener(new EventListener<QuerySnapshot>() {
                         @Override
                         public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

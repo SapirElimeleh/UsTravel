@@ -11,8 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.bumptech.glide.Glide;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
@@ -61,12 +59,6 @@ public class FavTripAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         String likes = String.valueOf(trip.getNumLikes());
         favTripViewHolder.trip_TV_numLikes.setText(likes);
 
-        if (DataManager.getInstance().getCurrent_user().getPhotoUrl() != null) {
-
-//            Glide.with(fragment)
-//                    .load(DataManager.getInstance().getCurrent_user().getPhotoUrl())
-//                    .into(favTripViewHolder.trip_IMG_image);
-        }
 
         if(trip.isLiked())
             favTripViewHolder.trip_IMG_like.setImageResource(R.drawable.ic_baseline_favorite_24);

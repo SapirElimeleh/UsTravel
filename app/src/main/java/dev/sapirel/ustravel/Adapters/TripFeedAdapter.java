@@ -28,7 +28,7 @@ import dev.sapirel.ustravel.ui.TripFeedFragmentDirections;
 public class TripFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Fragment fragment;
-    private ArrayList<Trip> trips = new ArrayList<>();
+    private ArrayList<Trip> trips;
     private TripItemClickListener tripItemClickListener;
 
     public TripFeedAdapter(Fragment fragment, ArrayList<Trip> trips) {
@@ -63,7 +63,9 @@ public class TripFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         String likes = String.valueOf(trip.getNumLikes());
         tripFeedViewHolder.trip_TV_numLikes.setText(likes);
 
-        if (DataManager.getInstance().getCurrent_user().getPhotoUrl() != null) {
+     //   if (DataManager.getInstance().getCurrent_user().getPhotoUrl() != null) {
+
+            if(!(trip.getImage().equals(""))){
 
             Glide.with(fragment)
                     .load(trip.getImage())

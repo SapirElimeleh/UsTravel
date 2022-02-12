@@ -42,6 +42,7 @@ public class MyTripsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        temp = DataManager.getMyTrips();
 
     }
 
@@ -50,15 +51,11 @@ public class MyTripsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_my_trips, container, false);
-        temp = DataManager.getMyTrips();
+        MyTripAdapter myTripAdapter = new MyTripAdapter(this, temp);
 
         findView(view);
         initView(this);
 
-
-
-        MyTripAdapter myTripAdapter = new MyTripAdapter(this, temp);
-        Log.d("ptt", temp.toString());
 
         myTrips_RV_myTrips.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL,false));
         myTrips_RV_myTrips.setHasFixedSize(true);
