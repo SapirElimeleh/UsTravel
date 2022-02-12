@@ -65,11 +65,19 @@ public class TripFragment extends Fragment {
             TripFragmentArgs tripFragmentArgs = TripFragmentArgs.fromBundle(getArguments());
             this.trip = tripFragmentArgs.getTrip();
         }
+
+
         days = DataManager.getInstance().getDays(trip.getId());
 
         DayAdapter dayAdapter = new DayAdapter(this, days);
 
         findView(view);
+
+
+        if(!trip.getUserId().equals(DataManager.getInstance().getCurrent_user().getUid())) {
+            trip_BTN_deleteTrip.setVisibility(View.INVISIBLE);
+            trip_BTN_addDay.setVisibility(View.INVISIBLE);
+        }
         initView(this);
 
 

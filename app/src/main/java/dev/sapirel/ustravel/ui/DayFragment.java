@@ -46,7 +46,9 @@ public class DayFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        trip = new Trip();
     }
 
     @Override
@@ -54,13 +56,28 @@ public class DayFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_day, container, false);
-        findView(view);
-        initView(this);
+
 
         if(getArguments() != null) {
             DayFragmentArgs dayFragmentArgs = DayFragmentArgs.fromBundle(getArguments());
             this.day = dayFragmentArgs.getDay();
+
         }
+
+        trip = DataManager.getInstance().getTripByIDFromTrips(day.getTripId());
+
+        if(trip == null)
+            trip = DataManager.getInstance().getTripByID(day.getTripId());
+
+
+        findView(view);
+
+            if (!trip.getUserId().equals(DataManager.getInstance().getCurrent_user().getUid()))
+                day_BTN_delete.setVisibility(View.INVISIBLE);
+
+        initView(this);
+
+
 
         setDayName(day.getDayName());
         setDayDate(day.getDate());

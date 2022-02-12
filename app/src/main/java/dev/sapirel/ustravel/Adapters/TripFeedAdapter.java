@@ -45,7 +45,7 @@ public class TripFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_trip_item, parent, false);
-
+        setTripItemClickListener(tripItemClickListener);
 
         return new TripFeedAdapter.TripFeedViewHolder(view);
     }
@@ -94,7 +94,6 @@ public class TripFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
 
     public interface TripItemClickListener{
-        // void tripItemClick(Trip trip, int position);
         void likeClicked(Trip trip, int position);
     }
 
@@ -146,7 +145,7 @@ public class TripFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                 trip.setLiked(true);
                             }
 
-                            if(getTripItem(getAdapterPosition()) != null)
+                            if(trip != null)
                                 tripItemClickListener.likeClicked(getTripItem(getAdapterPosition()), getAdapterPosition());
 
                         }

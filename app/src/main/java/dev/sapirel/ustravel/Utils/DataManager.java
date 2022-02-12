@@ -207,7 +207,7 @@ public class DataManager {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
 
-                        readDataFromFireBase();
+                        EventChangeListenerTrips();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -228,7 +228,7 @@ public class DataManager {
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        readDataFromFireBase();
+                        EventChangeListenerDays();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -237,7 +237,7 @@ public class DataManager {
             }
         });
 
-
+       // allDays.add(day);
 
     }
 
@@ -292,6 +292,14 @@ public class DataManager {
         return null;
     }
 
+    public Trip getTripByIDFromTrips(String tripId) {
+        for(Trip trip : trips)
+            if(trip.getId().equals(tripId))
+                return trip;
+
+        return null;
+    }
+
     public FirebaseUser getCurrent_user(){
         return dataManager.current_user;
     }
@@ -301,5 +309,6 @@ public class DataManager {
 
        return Url;
     }
+
 
 }
