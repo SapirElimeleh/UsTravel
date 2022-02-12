@@ -13,9 +13,9 @@ Here's some features:
 * **Explore trips from UsTravel users all over the world.**
 * **Add favorites trips to My Favorites and maybe one day make it your own adventure!**  
 
-![image](https://github.com/SapirElimeleh/UsTravel/blob/master/app/src/main/res/drawable/Screenshot_1.png?raw=true)
-![image](https://github.com/SapirElimeleh/UsTravel/blob/master/app/src/main/res/drawable/Screenshot_2.png?raw=true)
-![image](https://github.com/SapirElimeleh/UsTravel/blob/master/app/src/main/res/drawable/Screenshot_3.png?raw=true)
-![image](https://github.com/SapirElimeleh/UsTravel/blob/master/app/src/main/res/drawable/Screenshot_4.png?raw=true)
+![image](https://github.com/SapirElimeleh/UsTravel/blob/master/app/src/main/res/drawable/screenshot_1.png?raw=true)
+![image](https://github.com/SapirElimeleh/UsTravel/blob/master/app/src/main/res/drawable/screenshot_2.png?raw=true)
+![image](https://github.com/SapirElimeleh/UsTravel/blob/master/app/src/main/res/drawable/screenshot_3.png?raw=true)
+![image](https://github.com/SapirElimeleh/UsTravel/blob/master/app/src/main/res/drawable/screenshot_4.png?raw=true)
 
 
