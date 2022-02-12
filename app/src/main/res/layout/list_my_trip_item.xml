@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp"
+    android:elevation="10dp"
+    android:layout_margin="10dp">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/myTrip_IMG_plain"
+        android:layout_width="46dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        app:srcCompat="@drawable/ic_baseline_airplanemode_active_24" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/myTrip_TV_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/myTrip_IMG_plain"
+        android:maxLines="1"
+        android:minLines="1"
+        android:text="TRIP_LOCATION"
+        android:textColor="#BEBEBE"
+        android:textSize="25sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/day_IV_arrow"
+        android:layout_width="40dp"
+        android:layout_height="22dp"
+        android:layout_below="@id/myTrip_TV_location"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-25dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+</RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TripFragment">
+
+    <ImageButton
+        android:id="@+id/trip_BTN_addDay"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_baseline_add_24" />
+
+    <ImageButton
+        android:id="@+id/trip_BTN_deleteTrip"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_baseline_delete_24" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/trip_TV_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="My Trips"
+        android:textColor="@color/palette6"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:id="@+id/trip_LL_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trip_TV_userName"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/trip_IV_plain"
+            android:layout_width="41dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_baseline_airplanemode_active_24" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/trip_TV_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Trips"
+            android:textColor="@color/palette6"
+            android:textSize="40dp" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line_vw_line"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:background="@color/palette6" />
+
+    <LinearLayout
+        android:id="@+id/trip_LL_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_vw_line"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trip_IV_date"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@drawable/ic_baseline_date_range_24" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/trip_TV_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="dd/mm/yy - dd/mm/yy"
+            android:textColor="@color/palette4"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trip_RV_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/trip_LL_view" />
+
+
+</RelativeLayout>

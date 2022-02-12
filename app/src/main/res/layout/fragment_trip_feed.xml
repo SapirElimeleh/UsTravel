@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TripFeedFragment">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/feed_SV_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/feed_TV_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:text="Trips Feed"
+        android:textColor="@color/palette6"/>
+
+    <View
+        android:id="@+id/line_vw_line"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/palette6"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tripFeed_RV_rv"
+        android:layout_width="match_parent"
+        android:layout_height="517dp"
+        android:layout_below="@+id/line_vw_line"
+        android:paddingBottom="10dp" />
+
+    <ImageView
+        android:id="@+id/tripFeed_IM_logo"
+        android:layout_width="167dp"
+        android:layout_height="77dp"
+        android:layout_below="@+id/tripFeed_RV_rv"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/us_travel_logo" />
+
+
+</RelativeLayout>

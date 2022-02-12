@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_my_trips">
+
+    <fragment
+        android:id="@+id/nav_my_trips"
+        android:name="dev.sapirel.ustravel.ui.MyTripsFragment"
+        android:label="@string/menu_myTrips"
+        tools:layout="@layout/fragment_my_trips" >
+        <action
+            android:id="@+id/action_nav_my_trips_to_addTripFragment"
+            app:destination="@id/addTripFragment" />
+        <action
+            android:id="@+id/action_nav_my_trips_to_tripFragment"
+            app:destination="@id/tripFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_trips_feed"
+        android:name="dev.sapirel.ustravel.ui.TripFeedFragment"
+        android:label="@string/menu_tripsFeed"
+        tools:layout="@layout/fragment_trip_feed" >
+        <action
+            android:id="@+id/action_nav_trips_feed_to_tripFragment"
+            app:destination="@id/tripFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_my_fav"
+        android:name="dev.sapirel.ustravel.ui.MyFavoritesFragment"
+        android:label="@string/menu_myFavorites"
+        tools:layout="@layout/fragment_my_favorites" >
+        <action
+            android:id="@+id/action_nav_my_fav_to_tripFragment"
+            app:destination="@id/tripFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTripFragment"
+        android:name="dev.sapirel.ustravel.ui.AddTripFragment"
+        android:label="fragment_add_trip"
+        tools:layout="@layout/fragment_add_trip" >
+        <action
+            android:id="@+id/action_addTripFragment_to_nav_my_trips"
+            app:destination="@id/nav_my_trips" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripFragment"
+        android:name="dev.sapirel.ustravel.ui.TripFragment"
+        android:label="fragment_trip"
+        tools:layout="@layout/fragment_trip" >
+        <argument
+            android:name="trip"
+            app:argType="dev.sapirel.ustravel.Models.Trip"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_tripFragment_to_dayFragment"
+            app:destination="@id/dayFragment" />
+        <action
+            android:id="@+id/action_tripFragment_to_addDayFragment"
+            app:destination="@id/addDayFragment" />
+        <action
+            android:id="@+id/action_tripFragment_to_nav_my_trips2"
+            app:destination="@id/nav_my_trips" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDayFragment"
+        android:name="dev.sapirel.ustravel.ui.AddDayFragment"
+        android:label="fragment_add_day"
+        tools:layout="@layout/fragment_add_day" >
+        <argument
+            android:name="trip"
+            app:argType="dev.sapirel.ustravel.Models.Trip"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_addDayFragment_to_tripFragment"
+            app:destination="@id/tripFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dayFragment"
+        android:name="dev.sapirel.ustravel.ui.DayFragment"
+        android:label="DayFragment" >
+        <argument
+            android:name="day"
+            app:argType="dev.sapirel.ustravel.Models.Day"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_dayFragment_to_tripFragment"
+            app:destination="@id/tripFragment" />
+    </fragment>
+</navigation>

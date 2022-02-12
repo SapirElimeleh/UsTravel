@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DayFragment">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/day_BTN_delete"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_baseline_delete_24" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/day_TV_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Day 1"
+        android:textColor="@color/palette6"
+        android:textSize="40dp" />
+
+    <View
+        android:id="@+id/line_vw_line"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/palette6"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/Day_LL_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_vw_line"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/day_IV_date"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/line_vw_line"
+        android:layout_centerHorizontal="true"
+        android:paddingEnd="5dp"
+        app:srcCompat="@drawable/ic_baseline_date_range_24" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/day_TV_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_vw_line"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/day_IV_date"
+        android:text="dd/mm/yy"
+        android:textColor="@color/palette4"
+        android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/day_IV_location"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/Day_LL_view"
+        android:src="@drawable/ic_baseline_location_on_24" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/day_TV_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Day_LL_view"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/day_IV_location"
+        android:textColor="@color/palette6"
+        android:paddingLeft="10dp"
+        android:text="Location"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/day_IV_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/day_TV_location"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/palette3" />
+
+
+</RelativeLayout>

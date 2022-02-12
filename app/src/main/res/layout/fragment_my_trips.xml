@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MyTripsFragment">
+
+
+    <ImageButton
+        android:id="@+id/myTrips_BTN_add"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_baseline_add_24" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/myTrips_TV_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:text="My Trips"
+        android:textColor="@color/palette6"/>
+
+    <View
+        android:id="@+id/myTrips_line_line"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/palette6"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myTrips_RV_myTrips"
+        android:layout_width="match_parent"
+        android:layout_height="517dp"
+        android:layout_below="@id/myTrips_line_line"
+        android:paddingBottom="10dp" />
+
+
+    <ImageView
+        android:layout_width="173dp"
+        android:layout_height="78dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/us_travel_logo" />
+
+</RelativeLayout>
